@@ -6,6 +6,17 @@
 
 # Solution : 
 
+inputs = open("aoc/2021/Day 7/input.txt")
+inputs = list(map(int, inputs.read().split(",")))
 
+real = list()
 
-# Answer : 
+for _ in range(min(inputs), max(inputs)+1):
+    ls = list()
+    for i in inputs:
+        ls.append(abs(i-_))
+    real.append(sum(ls))
+
+print(min(real))
+
+# Answer : 331067
